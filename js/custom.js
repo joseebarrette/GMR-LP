@@ -420,15 +420,21 @@
 						}
 					},
 					messages:{
-							name:{
-								required: "Please enter no more than (1) characters"
+							firstname:{
+								required: "Veuillez entrer plus d'un (1) caractère"
 							}, 
+							lastname:{
+								required: "Veuillez entrer plus d'un (1) caractère"
+							},
+							organisation:{
+								required: "Veuillez entrer plus d'un (1) caractère"
+							},
 							email:{
-								required: "We need your email address to contact you",
-								email: "Your email address must be in the format of name@domain.com"
+								required: "Nous avons besoin de votre adresse courriel pour vous contacter",
+								email: "Votre adresse courriel doit être dans le format nom@domaine.com"
 							}, 
 							message:{
-								required: "Please enter no more than (2) characters"
+								required: "Veuillez entrer plus de deux (2) caractère"
 							}, 
 						}
 		});	
