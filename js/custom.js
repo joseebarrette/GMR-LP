@@ -2,66 +2,66 @@
 
 
 	$(window).on('load', function() {
-	
+
 		"use strict";
-						
+
 		/*----------------------------------------------------*/
 		/*	Preloader
 		/*----------------------------------------------------*/
-		
+
 		$("#loader").delay(100).fadeOut();
 		$("#loader-wrapper").delay(100).fadeOut("fast");
-				
+
 		$(window).stellar({});
-		
+
 	});
-	
+
 
 	$(window).on('scroll', function() {
-		
+
 		"use strict";
-								
+
 		/*----------------------------------------------------*/
 		/*	Navigtion Menu Scroll
-		/*----------------------------------------------------*/	
-		
+		/*----------------------------------------------------*/
+
 		var b = $(window).scrollTop();
-		
-		if( b > 72 ){		
+
+		if( b > 72 ){
 			$(".navbar").addClass("scroll");
 		} else {
 			$(".navbar").removeClass("scroll");
 		}
-				
+
 
 	});
 
 
 	$(document).ready(function() {
-			
+
 		"use strict";
 
 
 		/*----------------------------------------------------*/
 		/*	Mobile Menu Toggle
 		/*----------------------------------------------------*/
-		
-		$('.navbar-nav li.nav-item').on('click', function() {				
+
+		$('.navbar-nav li.nav-item').on('click', function() {
 			$('#navbarSupportedContent').css("height", "1px").removeClass("in").addClass("collapse");
-			$('#navbarSupportedContent').removeClass("show");				
+			$('#navbarSupportedContent').removeClass("show");
 		});
 
 
 		/*----------------------------------------------------*/
 		/*	Hero Text Rotator
 		/*----------------------------------------------------*/
-	
+
 		$('.hero-slider').flexslider({
 			animation: "fade",
 			controlNav: true,
-			directionNav: false,  
-			slideshowSpeed: 5500,   
-			animationSpeed: 1500,  
+			directionNav: false,
+			slideshowSpeed: 5500,
+			animationSpeed: 1500,
 			start: function(slider){
 				$('body').removeClass('loading');
 			}
@@ -71,7 +71,7 @@
 		/*----------------------------------------------------*/
 		/*	OnScroll Animation
 		/*----------------------------------------------------*/
-		
+
 		$('.animated').appear(function() {
 
 	        var elem = $(this);
@@ -88,16 +88,16 @@
 	                elem.addClass( animation + " visible" );
 	            }
 	        }
-						
+
 		});
 
 
 		/*----------------------------------------------------*/
 		/*	Animated Scroll To Anchor
 		/*----------------------------------------------------*/
-		
+
 		$('.header a[href^="#"], .page a.btn[href^="#"], .page a.internal-link[href^="#"]').on('click', function (e) {
-			
+
 			e.preventDefault();
 
 			var target = this.hash,
@@ -108,14 +108,14 @@
 			}, 'slow', 'easeInSine', function () {
 				window.location.hash = '1' + target;
 			});
-			
+
 		});
-		
-		
+
+
 		/*----------------------------------------------------*/
 		/*	ScrollUp
 		/*----------------------------------------------------*/
-		
+
 		$.scrollUp = function (options) {
 
 			// Defaults
@@ -140,7 +140,7 @@
 				href: '#top',
 				title: o.scrollText
 			}).appendTo('body');
-			
+
 			// If not using an image display text
 			if (!o.scrollImg) {
 				$(scrollId).text(o.scrollText);
@@ -156,7 +156,7 @@
 			}
 
 			// Scroll function
-			$(window).on('scroll', function(){	
+			$(window).on('scroll', function(){
 				switch (o.animation) {
 					case "fade":
 						$( ($(window).scrollTop() > o.topDistance) ? $(scrollId).fadeIn(o.animationInSpeed) : $(scrollId).fadeOut(o.animationOutSpeed) );
@@ -176,23 +176,32 @@
 			});
 
 		};
-		
+
 		$.scrollUp();
 
 
 		/*----------------------------------------------------*/
 		/*	Filterable Portfolio
 		/*----------------------------------------------------*/
-	
+
 		$("#portfolio-2 .row").mixitup({
 			targetSelector: '.portfolio-item',
 		});
 
 
 		/*----------------------------------------------------*/
+		/*	Open Fancybox 5 seconds after .ready
+		/*----------------------------------------------------*/
+
+		setTimeout(function(){
+			$('#modal').fancybox().trigger('click');
+		}, 5000);
+
+
+		/*----------------------------------------------------*/
 		/*	Single Image Lightbox
 		/*----------------------------------------------------*/
-				
+
 		$('.image-link').magnificPopup({
 		  type: 'image'
 		});
@@ -201,27 +210,27 @@
 		/*----------------------------------------------------*/
 		/*	Video Link Lightbox
 		/*----------------------------------------------------*/
-		
+
 		$('.video-popup').magnificPopup({
 		    type: 'iframe',
-		  	  
+
 				iframe: {
 					patterns: {
 						youtube: {
-			   
+
 							index: 'youtube.com',
 							src: 'https://www.youtube.com/embed/Q6HCnq7uOYU'
-				
+
 								}
 							}
-						}		  		  
+						}
 		});
 
 
 		/*----------------------------------------------------*/
 		/*	Statistic Counter
 		/*----------------------------------------------------*/
-	
+
 		$('.statistic-number').each(function () {
 			$(this).appear(function() {
 				$(this).prop('Counter',0).animate({
@@ -240,7 +249,7 @@
 		/*----------------------------------------------------*/
 		/*	Testimonials Rotator Slick Carousel
 		/*----------------------------------------------------*/
-		
+
 		$('#reviews-1 .center').slick({
 			centerMode: true,
 			arrows: false,
@@ -293,7 +302,7 @@
 		/*----------------------------------------------------*/
 		/*	Rotator OwlCarousel
 		/*----------------------------------------------------*/
-	
+
 		var owl = $('.reviews-holder, .about-carousel, .content-carousel');
 			owl.owlCarousel({
 				items: 1,
@@ -312,23 +321,23 @@
 		/*----------------------------------------------------*/
 		/*	Testimonials Rotator Flexslider
 		/*----------------------------------------------------*/
-		
+
 		$('.flexslider').flexslider({
 			animation: "fade",
 			controlNav: true,
-			directionNav: false,  
-			slideshowSpeed: 5000,   
-			animationSpeed: 2000,  
+			directionNav: false,
+			slideshowSpeed: 5000,
+			animationSpeed: 2000,
 			start: function(slider){
 				$('body').removeClass('loading');
 			}
-		});	
+		});
 
 
 		/*----------------------------------------------------*/
 		/*	Screens Carousel OwlCarousel
 		/*----------------------------------------------------*/
-	
+
 		var owl = $('.screens-carousel');
 			owl.owlCarousel({
 				items: 4,
@@ -361,7 +370,7 @@
 		/*----------------------------------------------------*/
 		/*	Brands Logo Rotator
 		/*----------------------------------------------------*/
-	
+
 		var owl = $('.brands-logo-holder');
 			owl.owlCarousel({
 				items: 6,
@@ -386,7 +395,7 @@
 					},
 					991:{
 						items:4
-					},				
+					},
 					1000:{
 						items:5
 					}
@@ -397,9 +406,9 @@
 		/*----------------------------------------------------*/
 		/*	Contact Form Validation
 		/*----------------------------------------------------*/
-		
+
 		$(".contact-form").validate({
-			rules:{ 
+			rules:{
 					name:{
 						required: true,
 						minlength: 1,
@@ -413,7 +422,7 @@
 						required: true,
 						minlength: 4,
 						maxlength: 48,
-					},		
+					},
 					message:{
 						required: true,
 						minlength: 2,
@@ -422,24 +431,24 @@
 					messages:{
 							name:{
 								required: "Please enter no more than (1) characters"
-							}, 
+							},
 							email:{
 								required: "We need your email address to contact you",
 								email: "Your email address must be in the format of name@domain.com"
-							}, 
+							},
 							message:{
 								required: "Please enter no more than (2) characters"
-							}, 
+							},
 						}
-		});	
+		});
 
 
 		/*----------------------------------------------------*/
 		/*	Comment Form Validation
 		/*----------------------------------------------------*/
-		
+
 		$(".comment-form").validate({
-			rules:{ 
+			rules:{
 					name:{
 						required: true,
 						minlength: 1,
@@ -448,7 +457,7 @@
 					email:{
 						required: true,
 						email: true,
-					},       		
+					},
 					message:{
 						required: true,
 						minlength: 2,
@@ -457,24 +466,24 @@
 					messages:{
 							name:{
 								required: "Please enter no more than (1) characters"
-							}, 
+							},
 							email:{
 								required: "We need your email address to contact you",
 								email: "Your email address must be in the format of name@domain.com"
-							}, 
+							},
 							message:{
 								required: "Please enter no more than (2) characters"
-							}, 
+							},
 						}
-		});	
+		});
 
 
 		/*----------------------------------------------------*/
 		/*	Register Form Validation
 		/*----------------------------------------------------*/
-		
+
 		$(".register-form").validate({
-			rules:{ 
+			rules:{
 					name:{
 						required: true,
 						minlength: 2,
@@ -492,15 +501,15 @@
 					messages:{
 							name:{
 								required: "Please enter no more than (1) characters"
-							}, 
+							},
 							email:{
 								required: "We need your email address to contact you",
 								email: "Your email address must be in the format of name@domain.com"
-							}, 
+							},
 							phone:{
 								required: "Please enter only digits",
 								digits: "Please enter a valid number"
-							}, 
+							},
 						}
 		});
 
@@ -508,7 +517,7 @@
 		/*----------------------------------------------------*/
 		/*	Newsletter Subscribe Form
 		/*----------------------------------------------------*/
-	
+
 		$('.newsletter-form').ajaxChimp({
         language: 'cm',
         url: 'http://dsathemes.us3.list-manage.com/subscribe/post?u=af1a6c0b23340d7b339c085b4&id=344a494a6e'
@@ -524,7 +533,7 @@
 			3: 'The domain portion of the email address is invalid (the portion after the @: )',
 			4: 'The username portion of the email address is invalid (the portion before the @: )',
 			5: 'This email address looks fake or invalid. Please enter a real email address'
-		};	
+		};
 
 
 
