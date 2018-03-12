@@ -68,6 +68,7 @@ body {
 .wide-40 { padding-top: 100px; padding-bottom: 40px; }
 .wide-30 { padding-top: 100px; padding-bottom: 30px; }
 .wide-45 { padding-top: 30px; padding-bottom: 0; }
+.wide-35 { padding-top: 30px; padding-bottom: 30px; }
 
 /*------------------------------------------*/
 /*    Margin Top
@@ -400,6 +401,7 @@ ul {
 /*------------------------------------------*/
 
 a {
+	color: #ff4713;
 	text-decoration: none;
 	-webkit-transition: all 400ms ease-in-out;
 	-moz-transition: all 400ms ease-in-out;
@@ -4374,7 +4376,7 @@ textarea {
    =========================================================================== */
 
 .footer {
-	padding-top: 80px;
+	padding-top: 20px;
 	padding-bottom: 20px;
 }
 

@@ -5,7 +5,10 @@ $(document).ready(function() {
 
     $(".contact-form").submit(function(e) {
         e.preventDefault();
-        var name = $(".name");
+        var firstname = $(".firstname");
+        var lastname = $(".lastname");
+        var organisation = $(".organisation");
+        var telephone = $(".telephone");
         var email = $(".email");
         var subject = $(".subject");
         var msg = $(".message");
