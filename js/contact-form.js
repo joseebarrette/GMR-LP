@@ -5,38 +5,60 @@ $(document).ready(function() {
 
     $(".contact-form").submit(function(e) {
         e.preventDefault();
-        var firstname = $(".firstname");
-        var lastname = $(".lastname");
-        var organisation = $(".organisation");
-        var telephone = $(".telephone");
-        var email = $(".email");
-        var subject = $(".subject");
-        var msg = $(".message");
+        var firstname = $('[name="firstname"]');
+        var lastname = $('[name="lastname"]');
+        var organisation = $('[name="organisation"]');
+        var telephone = $('[name="telephone"]');
+        var email = $('[name="email"]');
+
         var flag = false;
-        if (name.val() == "") {
-            name.closest(".form-control").addClass("error");
-            name.focus();
+
+        if (firstname.val() == "") {
+            firstname.closest(".form-control").addClass("error");
+            firstname.focus();
             flag = false;
             return false;
         } else {
-            name.closest(".form-control").removeClass("error").addClass("success");
-        } if (email.val() == "") {
+            firstname.closest(".form-control").removeClass("error").addClass("success");
+        }
+
+        if (lastname.val() == "") {
+            lastname.closest(".form-control").addClass("error");
+            lastname.focus();
+            flag = false;
+            return false;
+        } else {
+            lastname.closest(".form-control").removeClass("error").addClass("success");
+        }
+
+        if (organisation.val() == "") {
+            organisation.closest(".form-control").addClass("error");
+            organisation.focus();
+            flag = false;
+            return false;
+        } else {
+            organisation.closest(".form-control").removeClass("error").addClass("success");
+        }
+
+        if (telephone.val() == "") {
+            telephone.closest(".form-control").addClass("error");
+            telephone.focus();
+            flag = false;
+            return false;
+        } else {
+            telephone.closest(".form-control").removeClass("error").addClass("success");
+        }
+
+        if (email.val() == "") {
             email.closest(".form-control").addClass("error");
             email.focus();
             flag = false;
             return false;
         } else {
             email.closest(".form-control").removeClass("error").addClass("success");
-        } if (msg.val() == "") {
-            msg.closest(".form-control").addClass("error");
-            msg.focus();
-            flag = false;
-            return false;
-        } else {
-            msg.closest(".form-control").removeClass("error").addClass("success");
-            flag = true;
         }
-        var dataString = "name=" + name.val() + "&email=" + email.val() + "&subject=" + subject.val() + "&msg=" + msg.val();
+
+        var dataString = "firstname=" + firstname.val() + "&lastname=" + lastname.val() + "&organisation=" + organisation.val() + "&telephone=" + telephone.val() + "&email=" + email.val());
         $(".loading").fadeIn("slow").html("Chargement...");
         $.ajax({
             type: "POST",
@@ -58,8 +80,5 @@ $(document).ready(function() {
     $("#reset").on('click', function() {
         $(".form-control").removeClass("success").removeClass("error");
     });
-    
+
 })
-
-
-
