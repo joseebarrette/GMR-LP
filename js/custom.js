@@ -195,6 +195,11 @@
 
 		setTimeout(function(){
 			$('#modal').fancybox().trigger('click');
+
+			$('.fancybox-close-small').on('click', function(event){
+		        event.stopPropagation();
+		        $.fancybox.close();
+		    });
 		}, 5000);
 
 
