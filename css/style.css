@@ -558,7 +558,7 @@ a:focus {
 .btn-gmr-orange {
 	background-image: -webkit-linear-gradient(left, #fc4513 0%, #e73e10 100%);
 	background-image: linear-gradient(left, #fc4513 0%, #e73e10 100%);
-	color: #111;
+	color: #fff;
 }
 
 .white-color .btn-yellow span {
@@ -780,8 +780,8 @@ a.s-link.ico-medium {
 a.s-link-circle {
 	width: 40px;
 	height: 40px;
-	color: #292a2e;
-	background-color: #fff;
+	color: #fff;
+	background-color: #015886;
 	font-size: 19px;
     line-height: 40px !important;
     display: block;
