@@ -1602,7 +1602,7 @@ span.section-id {
 }
 
 #hero-10 {
-	background-image: url(../images/gmr-power-shock.jpg);	
+	background-image: url(../images/gmr-power-shock-slider.jpg);	
 }
 
 #hero-11 {
@@ -1826,7 +1826,7 @@ span.section-id {
 	left: 50%;
 	top: 50%;
 	color: #fff;
-	text-align: center;
+	text-align: left;
 	display: inline-block;
 	-webkit-transform: translate(-50%,-50%);
 	-moz-transform: translate(-50%,-50%);
@@ -2017,7 +2017,7 @@ p.p-hero-medium {
 	
 #hero-6 .hero-txt p, 
 #hero-10 .hero-txt p { 
-	padding: 0 10%; 
+	/*padding: 0 10%; */
 }
 
 #hero-8 .hero-txt p {
@@ -4649,3 +4649,31 @@ textarea {
 nav a#pull {  
     display: none;  
 } 
+
+.portable img:hover{
+	opacity: 0.5;
+    filter: alpha(opacity=40);
+}
+
+
+a.portable:hover {
+	background: url(../images/icone-portable-hover.png) no-repeat scroll center center rgba(0, 0, 0, 0);
+	height: 217px;
+	position: absolute;
+top: 0;
+width: 150px;
+z-index: -1;
+display:none;
+}
+
+a.articulee {
+	
+}
+
+a.bloquante {
+	
+}
+
+a.double {
+	
+}
