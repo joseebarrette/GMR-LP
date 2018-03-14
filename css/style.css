@@ -250,7 +250,7 @@ body {
 .bg-purple { background-color: #5c3b5e; }
 .bg-yellow {background-color:  #ffec19; }
 .bg-firebrick { background-color: #b22222; }
-.bg-orange { background-color: #ff5607; }
+.bg-orange { background-color: #fc4513; }
 
 .trabg1 {
 	background-image: url(../images/tra-bg1.png);
@@ -777,7 +777,7 @@ a.s-link.ico-medium {
 }
 
 /* Cicle Icons */
-a.s-link-circle {
+/*a.s-link-circle {
 	width: 40px;
 	height: 40px;
 	color: #fff;
@@ -786,9 +786,23 @@ a.s-link-circle {
     line-height: 40px !important;
     display: block;
 	margin-right: 4px;
-    /*-webkit-border-radius: 100%;
+    -webkit-border-radius: 100%;
     -moz-border-radius: 100%;
-    border-radius: 100%;*/
+    border-radius: 100%;
+}*/
+
+a.s-link-circle {
+	width: 40px;
+	height: 40px;
+	color: #292a2e;
+	background-color: #ddd;
+	font-size: 19px;
+    line-height: 40px !important;
+    display: block;
+	margin-right: 4px;
+    -webkit-border-radius: 10%;
+    -moz-border-radius: 10%;
+    border-radius: 10%;
 }
 
 a.s-link-circle.ico-medium {
@@ -1152,7 +1166,7 @@ span.section-id {
 .orange-color a, 
 .orange-color span,
 .orange-color i {
-	color: #ff5607;
+	color: #fc4513;
 }
 
 .txt-uppercase {
@@ -2729,6 +2743,14 @@ p.p-hero-medium {
 	color: #fff; 
 }
 
+.bg-dark h2, .bg-dark h4 {
+	color: #fff;
+}
+
+.bg-dark p {
+	color: #fff;
+}
+
 .card-header a:hover {
 	color: #555;
 }
@@ -3440,10 +3462,10 @@ p.p-hero-medium {
 /*------------------------------------------*/ 
 
 .review-1 {
-	background-color: #fff;
-	border: 1px solid #f5f5f5;
-	margin-bottom: 50px;
-	padding: 45px 30px;
+	/*background-color: #fff;
+	border: 1px solid #f5f5f5;*/
+	margin-bottom: 30px;
+	padding: 30px 15px 30px 15px;
 	box-shadow: 0 0 6px rgba(10, 10, 10, 0.05);
 	-webkit-transition: all 450ms ease-in-out;
 	-moz-transition: all 450ms ease-in-out;
@@ -3597,8 +3619,8 @@ p.p-hero-medium {
 	-moz-border-radius: 50%;
 	border-radius: 50%;
 	opacity: 1;
-	width: 9px;
-	height: 9px;
+	width: 12px;
+	height: 12px;
 	padding: 0;
 	left: auto;
 	outline: 0px none;
@@ -3607,12 +3629,12 @@ p.p-hero-medium {
 }
 
 #reviews-1 .slick-dots li button:hover:before {
-	background: #999;
+	background: #e73e10;
 	outline: 0px none;
 }
 
 #reviews-1 .slick-dots li.slick-active button:before {
-	background: #555;
+	background: #fc4513;
 	outline: 0px none;
 }
 
@@ -4380,9 +4402,14 @@ textarea {
 	padding-bottom: 20px;
 }
 
-.dark-foo {
+/*.dark-foo {
 	color: #ccc;
 	background-color: #292929;
+}*/
+
+.dark-foo {
+	color: #fff;
+	background-color: #fc4513;
 }
 
 .dark-foo hr {
@@ -4441,7 +4468,7 @@ textarea {
 }
 
 .footer p a:hover {
-	color: #ff5607;
+	font-weight: bold;
 }
 
 /*------------------------------------------*/
@@ -4472,7 +4499,9 @@ textarea {
 }
 
 .footer-links li a:hover {
-	color: #ff5607;
+	
+	color: #fff;
+	text-decoration: underline;
 }
 
 .dark-foo .footer-links li a:hover {
@@ -4656,7 +4685,7 @@ nav a#pull {
 }
 
 
-a.portable:hover {
+.portable a:hover {
 	background: url(../images/icone-portable-hover.png) no-repeat scroll center center rgba(0, 0, 0, 0);
 	height: 217px;
 	position: absolute;
