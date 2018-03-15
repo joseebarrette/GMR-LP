@@ -69,6 +69,11 @@ body {
 .wide-30 { padding-top: 100px; padding-bottom: 30px; }
 .wide-45 { padding-top: 30px; padding-bottom: 0; }
 .wide-35 { padding-top: 30px; padding-bottom: 30px; }
+.wide-0 { padding-top: 100px; padding-bottom: 0; }
+.wide-sitl {
+	padding-top: 0;
+	padding-bottom: 40px;
+}
 
 /*------------------------------------------*/
 /*    Margin Top
@@ -251,6 +256,9 @@ body {
 .bg-yellow {background-color:  #ffec19; }
 .bg-firebrick { background-color: #b22222; }
 .bg-orange { background-color: #fc4513; }
+.bg-sitl {
+	background-color: #161616;
+}
 
 .trabg1 {
 	background-image: url(../images/tra-bg1.png);
@@ -265,7 +273,7 @@ body {
 }
 
 .trabg4 {
-	background-image: url(../images/world-map.png);
+	background: url(../images/gmr-powerchock-clients-bg.jpg) no-repeat center center;
 }
 
 .bg-dotted {
@@ -355,6 +363,10 @@ h2.h2-small {
 
 h2.h2-grm {
 	font-size: 1.5rem;
+}
+
+h2.clients {
+	font-size: 2rem;
 }
 
 h2 {
@@ -2747,7 +2759,14 @@ p.p-hero-medium {
 	color: #fff;
 }
 
+.bg-sitl h2, .bg-sitl h4 {
+	color: #fff;
+}
+
 .bg-dark p {
+	color: #fff;
+}
+.bg-sitl p {
 	color: #fff;
 }
 
@@ -3702,7 +3721,7 @@ p.p-hero-medium {
 #clients-1, 
 #clients-2 {
 	padding-top: 100px;
-	padding-bottom: 70px;
+	/*padding-bottom: 70px;*/
 }
 
 /*------------------------------------------*/
@@ -4678,6 +4697,12 @@ textarea {
 nav a#pull {  
     display: none;  
 } 
+
+.sitl {
+	background: #161616 url(../images/bg-titre-sitl.jpg) no-repeat center bottom;
+	padding-top: 100px;
+    padding-bottom: 10px;
+}
 
 .portable img:hover{
 	opacity: 0.5;
