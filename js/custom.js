@@ -194,7 +194,11 @@
 		/*----------------------------------------------------*/
 
 		setTimeout(function(){
-			$('#modal').fancybox().trigger('click');
+			$('#modal').fancybox().trigger('click').unbind('click');
+			// $('#modal').on('click', function(e) {
+			// 	e.preventDefault();
+			// 	e.stopPropagation();
+			// })
 
 			$('.fancybox-close-small').on('click', function(event){
 		        event.stopPropagation();
