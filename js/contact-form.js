@@ -58,7 +58,7 @@ $(document).ready(function() {
             email.closest(".form-control").removeClass("error").addClass("success");
         }
 
-        var dataString = "firstname=" + firstname.val() + "&lastname=" + lastname.val() + "&organisation=" + organisation.val() + "&telephone=" + telephone.val() + "&email=" + email.val());
+        var dataString = "firstname=" + firstname.val() + "&lastname=" + lastname.val() + "&organisation=" + organisation.val() + "&telephone=" + telephone.val() + "&email=" + email.val();
         $(".loading").fadeIn("slow").html("Chargement...");
         $.ajax({
             type: "POST",
