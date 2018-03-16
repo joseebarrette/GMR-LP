@@ -74,6 +74,9 @@ body {
 	padding-top: 0;
 	padding-bottom: 40px;
 }
+.wide-video {
+	padding: 45px 30px 45px 0;
+}
 
 /*------------------------------------------*/
 /*    Margin Top
@@ -230,7 +233,7 @@ body {
 	background-attachment: fixed !important;
 	background-repeat: no-repeat;
 	background-position: center center;		
-	background-size: cover;
+	/*background-size: cover;*/
 }
 
 .bg-fixed {
@@ -362,7 +365,8 @@ h2.h2-small {
 }
 
 h2.h2-grm {
-	font-size: 1.5rem;
+	font-size: 25px;
+	font-weight: bold;
 }
 
 h2.clients {
@@ -379,6 +383,10 @@ h2.h2-lg {
 	font-size: 3.5rem;
 	line-height: 1.2;
 	margin-bottom: 1rem;
+}
+
+h1{
+	font-size: 48px;
 }
 
 /*------------------------------------------*/
@@ -1628,7 +1636,7 @@ span.section-id {
 }
 
 #hero-10 {
-	background-image: url(../images/gmr-power-shock-slider.jpg);	
+	background: #000 url(../images/gmr-power-shock-slider.jpg) no-repeat right top;
 }
 
 #hero-11 {
@@ -2017,7 +2025,8 @@ p.p-hero-small {
 }
 
 p.p-hero {
-	font-size: 1.05rem;
+	font-size: 17px;
+	padding-top: 15px;
 	margin-bottom: 0.75rem;
 } 
 
@@ -3493,9 +3502,9 @@ p.p-hero-medium {
 	transition: all 450ms ease-in-out;
 }
 
-.review-1 {
+/*.review-1 {
 	opacity: 0.3;
-}
+}*/
 
 .review-1.slick-current {
     opacity: 1;
