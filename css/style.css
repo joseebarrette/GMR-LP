@@ -4713,6 +4713,12 @@ nav a#pull {
     padding-bottom: 10px;
 }
 
+#footer-3.footer-contact{
+	position: absolute;
+	bottom: 0;
+}
+
+
 .portable img:hover{
 	opacity: 0.5;
     filter: alpha(opacity=40);
